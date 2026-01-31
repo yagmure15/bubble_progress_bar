@@ -46,7 +46,7 @@ import 'package:bubble_progress_bar/bubble_progress_bar.dart';
 ### Basic Usage
 
 ```dart
-CustomGradientProgressBar(
+BubbleProgressBar(
   value: 0.7, // 70% progress
   height: 24,
   gradient: LinearGradient(
@@ -58,7 +58,7 @@ CustomGradientProgressBar(
 ### Advanced Usage with Custom Particles
 
 ```dart
-CustomGradientProgressBar(
+BubbleProgressBar(
   value: _downloadProgress,
   height: 30,
   bubbleDensity: 0.8,

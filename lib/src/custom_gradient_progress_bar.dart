@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 enum ParticleDirection { vertical, horizontal }
 
-class CustomGradientProgressBar extends StatefulWidget {
-  const CustomGradientProgressBar({
+class BubbleProgressBar extends StatefulWidget {
+  const BubbleProgressBar({
     required this.value,
     this.height = 20,
     this.gradient,
@@ -37,10 +37,10 @@ class CustomGradientProgressBar extends StatefulWidget {
   final ParticleDirection direction;
 
   @override
-  State<CustomGradientProgressBar> createState() => _CustomGradientProgressBarState();
+  State<BubbleProgressBar> createState() => _BubbleProgressBarState();
 }
 
-class _CustomGradientProgressBarState extends State<CustomGradientProgressBar> with SingleTickerProviderStateMixin {
+class _BubbleProgressBarState extends State<BubbleProgressBar> with SingleTickerProviderStateMixin {
   late AnimationController _bubbleController;
   final List<_Bubble> _bubbles = [];
 
@@ -95,7 +95,7 @@ class _CustomGradientProgressBarState extends State<CustomGradientProgressBar> w
   }
 
   @override
-  void didUpdateWidget(CustomGradientProgressBar oldWidget) {
+  void didUpdateWidget(BubbleProgressBar oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.bubbleDensity != widget.bubbleDensity ||
         oldWidget.minBubbleDiameter != widget.minBubbleDiameter ||

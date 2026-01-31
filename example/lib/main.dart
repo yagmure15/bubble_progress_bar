@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             const Text('Custom Gradient (Blue to Purple)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
             const SizedBox(height: 10),
-            CustomGradientProgressBar(
+            BubbleProgressBar(
               value: _progress,
               height: 30,
               gradient: const LinearGradient(colors: [Colors.blue, Colors.purple]),
@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 30),
             const Text('Small Bubbles', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
             const SizedBox(height: 10),
-            CustomGradientProgressBar(
+            BubbleProgressBar(
               value: _progress,
               height: 20,
               bubbleDensity: 0.6,
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 30),
             const Text('Custom Particle (Star Icon)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
             const SizedBox(height: 10),
-            CustomGradientProgressBar(
+            BubbleProgressBar(
               value: _progress,
               height: 30,
               bubbleDensity: 0.5,
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
             const SizedBox(height: 10),
-            CustomGradientProgressBar(
+            BubbleProgressBar(
               value: _progress,
               height: 40,
               bubbleDensity: 0.4,
@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
             const SizedBox(height: 10),
-            CustomGradientProgressBar(
+            BubbleProgressBar(
               value: _progress,
               height: 30,
               bubbleDensity: 0.6,
@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 30),
             const Text('Rectangular Radius', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
             const SizedBox(height: 10),
-            CustomGradientProgressBar(
+            BubbleProgressBar(
               value: _progress,
               height: 25,
               borderRadius: BorderRadius.circular(4), // Slightly rounded corners
@@ -136,7 +136,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
             const SizedBox(height: 10),
-            CustomGradientProgressBar(
+            BubbleProgressBar(
               value: _progress,
               height: 40,
               bubbleDensity: 0.2,

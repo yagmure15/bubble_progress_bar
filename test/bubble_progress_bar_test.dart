@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('CustomGradientProgressBar renders correctly', (tester) async {
+  testWidgets('BubbleProgressBar renders correctly', (tester) async {
     await tester.pumpWidget(
       const MaterialApp(
         home: Scaffold(
-          body: CustomGradientProgressBar(
+          body: BubbleProgressBar(
             value: 0.5,
             height: 30,
             bubbleDensity: 0.8,
@@ -19,7 +19,7 @@ void main() {
       ),
     );
 
-    expect(find.byType(CustomGradientProgressBar), findsOneWidget);
+    expect(find.byType(BubbleProgressBar), findsOneWidget);
     expect(find.byType(CustomPaint), findsOneWidget);
   });
 }
