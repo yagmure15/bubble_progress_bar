@@ -2,7 +2,7 @@
 
 A premium, highly customizable, and performance-optimized gradient progress bar with beautiful animated bubble particles for Flutter.
 
-![Bubble Progress Bar Showcase](example/assets/gif/showcase.gif)
+![Bubble Progress Bar Showcase](https://raw.githubusercontent.com/yagmure15/bubble_progress_bar/main/example/assets/gif/showcase.gif)
 
 ## 🌟 Overview
 

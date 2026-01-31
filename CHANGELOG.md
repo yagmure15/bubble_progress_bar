@@ -1,3 +1,7 @@
+## 0.0.2
+
+* Fixed showcase GIF visibility on pub.dev by using absolute URLs.
+
 ## 0.0.1
 
 * Initial release.
