@@ -3,7 +3,7 @@
 A premium, highly customizable, and performance-optimized gradient progress bar with beautiful animated bubble particles for Flutter.
 
 <p align="center">
-  <video src="example/assets/video/progress-bar.mp4" width="100%" controls autoplay loop muted></video>
+  <video src="https://raw.githubusercontent.com/yagmure15/bubble_progress_bar/main/example/assets/video/progress-bar.mp4" width="100%" controls autoplay loop muted></video>
 </p>
 
 *Note: If the video doesn't play above, you can find it in the `example/assets/video` folder.*
