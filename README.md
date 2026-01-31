@@ -1,39 +1,99 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Bubble Progress Bar 🫧
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A premium, highly customizable, and performance-optimized gradient progress bar with beautiful animated bubble particles for Flutter.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+![Progress Bar Demo](example/assets/video/progress-bar.mp4)
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+*Note: If the video doesn't play above, you can find it in the `example/assets/video` folder.*
 
-## Features
+## 🌟 Overview
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+**Bubble Progress Bar** is designed to give your app a modern and polished feel. Whether you're building a download manager, a file uploader, or an onboarding experience, this progress bar adds life to your UI with smooth bubble animations and vibrant gradients.
 
-## Getting started
+## ✨ Features
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- **🌈 Gradient Support:** Easily apply custom gradients to your progress bar.
+- **🫧 Particle System:** Optimized bubble particles that move vertically or horizontally.
+- **🚀 Performance-First:** Built using `FlowDelegate` and object pooling to ensure 60+ FPS even with high particle density.
+- **🎨 Highly Customizable:** Control everything from bubble density, diameters, and speed to progress curves and durations.
+- **🧩 Custom Widgets:** Use any custom widget as a particle (e.g., icons, images, or SVGs).
+- **📏 Responsive Layout:** Adapts perfectly to any parent container width.
 
-## Usage
+## 🚀 Getting Started
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Add the dependency to your `pubspec.yaml`:
 
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  bubble_progress_bar:
+    git:
+      url: https://github.com/yagmure15/bubble_progress_bar.git
 ```
 
-## Additional information
+Import the package:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+import 'package:bubble_progress_bar/bubble_progress_bar.dart';
+```
+
+## 📖 Usage
+
+### Basic Usage
+
+```dart
+CustomGradientProgressBar(
+  value: 0.7, // 70% progress
+  height: 24,
+  gradient: LinearGradient(
+    colors: [Colors.blue, Colors.purple],
+  ),
+)
+```
+
+### Advanced Usage with Custom Particles
+
+```dart
+CustomGradientProgressBar(
+  value: _downloadProgress,
+  height: 30,
+  bubbleDensity: 0.8,
+  minBubbleDiameter: 5,
+  maxBubbleDiameter: 12,
+  direction: ParticleDirection.horizontal,
+  gradient: LinearGradient(
+    colors: [Color(0xFF00C6FF), Color(0xFF0072FF)],
+  ),
+  bubbleWidget: Icon(
+    Icons.star,
+    color: Colors.white,
+    size: 10,
+  ),
+  borderRadius: BorderRadius.circular(15),
+  animationDuration: Duration(milliseconds: 500),
+  animationCurve: Curves.easeOutBack,
+)
+```
+
+## 🛠️ Parameters
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `value` | `double` | **Required** | Progress value between 0.0 and 1.0. |
+| `height` | `double` | `20.0` | Total height of the progress bar. |
+| `gradient` | `Gradient?` | `null` | Gradient for the filled part. |
+| `backgroundColor` | `Color?` | `Colors.grey[200]` | Color of the unfilled track. |
+| `bubbleDensity` | `double` | `0.5` | Density of particles (0.0 to 1.0). |
+| `minBubbleDiameter`| `double` | `4.0` | Minimum size of the bubbles. |
+| `maxBubbleDiameter`| `double` | `10.0` | Maximum size of the bubbles. |
+| `direction` | `ParticleDirection`| `vertical` | Movement direction (`vertical` or `horizontal`). |
+| `animationDuration`| `Duration` | `300ms` | Duration of the progress value transition. |
+| `bubbleWidget` | `Widget?` | `null` | Custom widget to use as a particle. |
+| `borderRadius` | `BorderRadius?`| `height / 2` | Corner radius of the bar. |
+
+## 🤝 Contributing
+
+Contributions are welcome! If you find a bug or have a feature request, please open an issue or submit a pull request on [GitHub](https://github.com/yagmure15/bubble_progress_bar).
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
