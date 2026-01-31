@@ -2,9 +2,23 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-enum ParticleDirection { vertical, horizontal }
+/// Defines the movement direction of the particles in the progress bar.
+enum ParticleDirection {
+  /// Particles move from bottom to top.
+  vertical,
 
+  /// Particles move from left to right.
+  horizontal,
+}
+
+/// A premium, performance-optimized gradient progress bar with beautiful animated bubble particles.
+///
+/// Use [BubbleProgressBar] to create an interactive progress indicator that supports
+/// custom gradients, particle effects, and different movement directions.
 class BubbleProgressBar extends StatefulWidget {
+  /// Creates a [BubbleProgressBar].
+  ///
+  /// The [value] must be between 0.0 and 1.0.
   const BubbleProgressBar({
     required this.value,
     this.height = 20,
@@ -23,17 +37,46 @@ class BubbleProgressBar extends StatefulWidget {
        assert(bubbleDensity >= 0 && bubbleDensity <= 1, 'Bubble density must be between 0 and 1'),
        assert(minBubbleDiameter <= maxBubbleDiameter, 'Min diameter must be less than or equal to max diameter');
 
+  /// The current progress value between 0.0 and 1.0.
   final double value;
+
+  /// The height of the progress bar.
   final double height;
+
+  /// The gradient to apply to the filled part of the progress bar.
   final Gradient? gradient;
+
+  /// The background color of the unfilled part of the progress bar.
   final Color? backgroundColor;
+
+  /// The density of the bubbles (0.0 to 1.0).
+  ///
+  /// A higher value means more bubbles will be generated.
   final double bubbleDensity;
+
+  /// The minimum diameter of a bubble particle.
   final double minBubbleDiameter;
+
+  /// The maximum diameter of a bubble particle.
   final double maxBubbleDiameter;
+
+  /// The duration of the progress value transition animation.
   final Duration animationDuration;
+
+  /// The curve to apply to the progress value transition animation.
   final Curve animationCurve;
+
+  /// An optional custom widget to use as a bubble particle.
+  ///
+  /// If null, a default white circle is used.
   final Widget? bubbleWidget;
+
+  /// The border radius of the progress bar.
+  ///
+  /// Defaults to `height / 2` (stadium shape).
   final BorderRadiusGeometry? borderRadius;
+
+  /// The movement direction of the bubble particles.
   final ParticleDirection direction;
 
   @override

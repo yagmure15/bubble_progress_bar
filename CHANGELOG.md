@@ -1,3 +1,8 @@
+## 0.0.3
+
+* Added comprehensive documentation comments to all public API elements.
+* Enabled `public_member_api_docs` lint.
+
 ## 0.0.2
 
 * Fixed showcase GIF visibility on pub.dev by using absolute URLs.
